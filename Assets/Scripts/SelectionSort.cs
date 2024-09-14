@@ -16,7 +16,7 @@ public class SelectionSort : MonoBehaviour
     private Element[] array = new Element[10];
     private float startPosX = -7.8f;
     private const float posY = 2.5f;
-    private float Scale = 3.0f;
+    private float Scale = 1.0f;
     private const float offsetScale = 1.14f;
     private bool clickTwoElements = false;
     private byte firstClickElementID = 0;
@@ -122,7 +122,10 @@ public class SelectionSort : MonoBehaviour
             }
             else
             {
-                
+                buttonRandom.interactable = true;
+                buttonShuffle.interactable = true;
+                buttonSort.interactable = true;
+                ShowArray();
             }
         }
     }
@@ -158,7 +161,7 @@ public class SelectionSort : MonoBehaviour
     }
     private IEnumerator StartSortingTimer()
     {
-        timerSorting = false;
+        timerSorting = true;
         timeSorting = 0;
         while (timerSorting)
         {
