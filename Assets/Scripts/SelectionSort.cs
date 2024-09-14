@@ -58,7 +58,7 @@ public class SelectionSort : MonoBehaviour
             componentColor = 0.1f * i;
             array[i].InitColor = new Color(componentColor, componentColor, componentColor);
 
-            if (true) Scale = rnd.Next(3, 10); else Scale *= offsetScale;
+            if (random) Scale = rnd.Next(3, 10); else Scale *= offsetScale;
         }
     }
     private void ShowArray()
