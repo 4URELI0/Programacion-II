@@ -13,7 +13,7 @@ public class Element : MonoBehaviour
     private Color initColor = Color.white;
     public byte elementID { get; set; } = 0;
 
-    private Color InitColor
+    public Color InitColor
     {
         get
         {
