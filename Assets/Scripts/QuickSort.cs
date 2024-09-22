@@ -1,25 +1,46 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class QuickSort : MonoBehaviour
 {
-    private int[] rand;
+    public int[] rand;
     public Text text1;
     public Text text2;
-
+    public Button btn = null;
+    public Button btn2 = null;
+    private void OnEnable()
+    {
+        btn.onClick.AddListener(QuickSortMostrar);
+        btn2.onClick.AddListener(ResetRandomValues);
+    }
     private void Start()
     {
         rand = new int[10];
+        GenerateRandomValues();
+    }
+    /*Genera valores aleatorio y actualiza a text1*/
+    private void GenerateRandomValues()
+    {
         text1.text = "";
         text2.text = "";
-
         for (int i = 0; i < 10; ++i)
         {
             rand[i] = Random.Range(0, 100);
             text1.text += " " + rand[i];
         }
+    }
+    public void ResetRandomValues()
+    {
+        GenerateRandomValues();
+    }
+    /*Limpiamos el text2 antes de mostrar los valores ordenados*/
+    public void QuickSortMostrar()
+    {
         Quicksort(rand);
         for (int i = 0; i < 10; ++i)
         {
