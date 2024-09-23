@@ -1151,7 +1151,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Valores aplicando quick sort:'
+  m_Text: 'Values applying quick sort:'
 --- !u!222 &1156614328
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1275,7 +1275,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Valores aleatorio:'
+  m_Text: 'RANDOM VALUES:'
 --- !u!222 &1696884702
 CanvasRenderer:
   m_ObjectHideFlags: 0
